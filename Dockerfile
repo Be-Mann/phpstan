@@ -52,4 +52,4 @@ WORKDIR /app
 VOLUME /app
 
 ENTRYPOINT ["phpstan"]
-CMD ["analyse"]
+CMD ["analyse", "--error-format=json", "--no-progress", "-o", "/app/phpstan-results.json"]
